@@ -1,42 +1,240 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+/* Authentication Pages */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #121212;
+}
+
+.auth-form {
+  background: #1f1f1f;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 87, 51, 0.3);
   text-align: center;
+  width: 350px;
+}
+
+.auth-form h2 {
+  color: #ff5733;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: white;
+  font-size: 16px;
+}
+
+.auth-input::placeholder {
+  color: #999;
+}
+
+.auth-input-file {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 10px;
+  background: #ff5733;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.auth-btn:hover {
+  background: #e64a2e;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f1f1f;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 4px 10px rgba(255, 87, 51, 0.2);
+  z-index: 1000;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ff5733;
+  text-decoration: none;
+  transition: color 0.3s;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  color: #ff784f;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.auth-link:hover {
+  color: #ff5733;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-link:hover {
+  color: #ff784f;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ff5733;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+
+.username {
+  font-weight: 500;
+}
+
+.logout-btn {
+  background: #ff5733;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 14px;
+  margin-left: 15px;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: darkred;
+}
+
+/* Profile Page */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.profile-card {
+  background: #222;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  width: 380px;
+  box-shadow: 0 6px 15px rgba(255, 87, 51, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #ff5733;
+}
+
+.profile-name {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ff5733;
+}
+
+.profile-details {
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.profile-details p {
+  font-size: 16px;
+  margin: 6px 0;
+  color: #ddd;
+}
+
+.loading-text {
+  font-size: 18px;
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links {
+    margin-top: 10px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .profile-card {
+    width: 90%;
+    padding: 30px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
