@@ -8,7 +8,6 @@ const router = express.Router();
 // User details
 
 router.get("/profile", async (req, res, next) => {
-    console.log("Profile API called");
     const { email } = req.query;
 
     if (!email)

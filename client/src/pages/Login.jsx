@@ -13,7 +13,6 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     const loginSuccess = await login(email, password)
-    console.log('login', loginSuccess)
     if (loginSuccess)
       navigate("/");
     else

@@ -6,6 +6,7 @@ const path = require("path");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
+const progressRoutes = require("./routes/progressRoutes");
 const authMiddleware = require('./middleware/authMiddleware')
 
 dotenv.config();
@@ -19,6 +20,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/user/", authMiddleware, userRoutes)
+app.use("/api/progress", authMiddleware,progressRoutes)
 
 app.get("/", (req, res) => {
     res.send("Fitness API is running...");

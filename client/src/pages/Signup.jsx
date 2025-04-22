@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../context/context";
+import { toast } from "react-toastify";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -29,10 +30,13 @@ const Signup = () => {
     }
 
     const signupSuccess = await signup(formData)
-    if (signupSuccess)
+    if (signupSuccess) {
       navigate("/login");
-    else
-      setError("Signup failed. Please try again.");
+      toast.success("User Registered")
+    }
+    else {
+      toast.error('Signup failed. Please try again')
+    }
   };
 
   return (
