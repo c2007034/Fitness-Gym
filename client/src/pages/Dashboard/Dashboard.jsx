@@ -19,7 +19,7 @@ const Dashboard = () => {
         </div>
 
         <div className="card" onClick={() => navigate("/workout-recommendations")}>
-          <h2 className="card-title">Workout Recommendations</h2>
+          <h2 className="card-title">Workout/Diet Recommendations</h2>
           <p className="card-description">Get personalized workout plans.</p>
         </div>
       </div>

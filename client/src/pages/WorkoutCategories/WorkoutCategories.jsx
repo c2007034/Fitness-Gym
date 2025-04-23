@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import "./Workouts.css";
 
 const WorkoutCategories = () => {
   const navigate = useNavigate();
