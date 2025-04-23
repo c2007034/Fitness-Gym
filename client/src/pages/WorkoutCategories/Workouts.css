@@ -1,0 +1,81 @@
+.workout-cat-page h2{
+ margin-bottom: 1rem;
+}
+
+.category-grid {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .category-card {
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 280px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #ff4500;
+  }
+  
+  .category-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .category-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #ff4500;
+  }
+  
+  /* weight loss */
+
+.workout-page {
+  padding-top: 20px;
+  background-color: #111;
+  color: #f0f0f0;
+  min-height: 100vh;
+}
+
+.workout-page h2 {
+  text-align: center;
+  color: #ff6347;
+  margin-bottom: 2rem;
+}
+
+.main-workout-image {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ff6347;
+}
+
+.exercise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.exercise-card {
+  background-color: #1c1c1c;
+  border-left: 5px solid #ff6347;
+  padding: 1.5rem;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.exercise-card:hover {
+  transform: scale(1.02);
+}
+
+.exercise-card h3 {
+  color: #ff6347;
+  margin-bottom: 0.5rem;
+}

@@ -8,6 +8,9 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import ProgressTracking from "./pages/ProgressTracking/ProgressTracking";
 import WorkoutCategories from "./pages/WorkoutCategories/WorkoutCategories";
 import WorkoutRecommendations from "./pages/WorkoutRecommendations/WorkoutRecommendations";
+import WeightLossWorkouts from "./pages/WorkoutCategories/WeightLossWorkouts";
+import WeightGainWorkouts from "./pages/WorkoutCategories/WeightGainWorkouts";
+import MuscleBuildingWorkouts from "./pages/WorkoutCategories/MuscleBuildingWorkouts";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import { Context } from "./context/context";
@@ -32,7 +35,10 @@ function App() {
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         <Route path="/progress-tracking" element={<ProtectedRoute><ProgressTracking /></ProtectedRoute>} />
-        <Route path="/workout-categories" element={<ProtectedRoute><WorkoutCategories /></ProtectedRoute>} />
+        <Route path="/workouts" element={<ProtectedRoute><WorkoutCategories /></ProtectedRoute>} />
+        <Route path="/workouts/weight-loss" element={<WeightLossWorkouts />} />
+        <Route path="/workouts/weight-gain" element={<WeightGainWorkouts />} />
+        <Route path="/workouts/muscle-building" element={<MuscleBuildingWorkouts />} />
         <Route path="/workout-recommendations" element={<ProtectedRoute><WorkoutRecommendations /></ProtectedRoute>} />
         <Route path="/progress-tracking" element={<ProtectedRoute><ProgressTracking /></ProtectedRoute>} />
 

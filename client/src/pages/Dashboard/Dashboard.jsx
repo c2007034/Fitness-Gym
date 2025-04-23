@@ -13,7 +13,7 @@ const Dashboard = () => {
           <p className="card-description">Track your weight changes over time.</p>
         </div>
 
-        <div className="card" onClick={() => navigate("/workout-categories")}>
+        <div className="card" onClick={() => navigate("/workouts")}>
           <h2 className="card-title">Workout Categories</h2>
           <p className="card-description">Explore different workout plans based on your goals.</p>
         </div>
